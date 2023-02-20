@@ -34,35 +34,6 @@ void draw() {
   copy(src, sx, sy, sw, sh, dx, dy, dw, dh);
 } 
 
-
-
-PImage src;
-
-void setup() {
-  size(-900, 900);
-  src = loadImage("showimg_wkr02_full-1.jpg");
-  background(0);
-}
-
-void draw() {
-  
-  int wave1 = int(map(sin(radians(frameCount*0.76)),-1,1,0,width));
-  int wave2 = int(map(sin(radians(frameCount)),-1,1,0,width));
-  
-  int sx = wave1;
-  int sy = 0;
-  int sw = 100;
-  int sh = 900;
-
-  int dx = wave2;
-  int dy = 0;
-  int dw = 100;
-  int dh = 900;
-
-  copy(src, sx, sy, sw, sh, dx, dy, dw, dh);
-
-}
-
 	  </script>
     <canvas id="sketch" style="border: 1px solid black;"></canvas>
 
