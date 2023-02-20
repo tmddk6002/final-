@@ -42,28 +42,7 @@ void draw() {
   copy(src, sx, sy, sw, sh, dx, dy, dw, dh);
 }
 
-PShape rocket;
-
-float ry;
-  
-public void setup() {
-  size(6400, 3600, P3D);
-    
-  rocket = loadShape("uploads_files_2046352_sockets-switches-set_EU_free-obj.obj");
-}
-
-public void draw() {
-  background(0);
-  lights();
-  
-  translate(width/2, height/2 + 100, -200);
-  rotateZ(PI);
-  rotateY(ry);
-  shape(rocket);
-  
-  ry += 0.02;
-}
-	   </script> <canvas id="sketch" style="border: 1px solid black;"></canvas>
+   </script> <canvas id="sketch" style="border: 1px solid black;"></canvas>
 
 
 
