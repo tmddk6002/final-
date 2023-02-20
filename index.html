@@ -1,12 +1,33 @@
 <html>
 
 <head>
-
-    <script type="text/javascript" src="processing.js"></script>
-     
+	
+ <script type="text/javascript" src="processing.js"></script>	  
+ 	<style>
+	p {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+  border: 2px solid powderblue; 
+	}
+	container {
+   align-content: stretch;
+	/* align-content: start; */
+	/* align-content: center; */
+	/* align-content: end; */
+	/* align-content: space-between; */
+	/* align-content: space-around; */
+	/* align-content: space-evenly; */
+	}
+</style> 
+  
 </head>
+	
+<body> 
 
-<body>
+   
+ <div class="container">
+	<div class="item">   
     <script type="text/processing">
 
 PImage src;
@@ -34,11 +55,21 @@ void draw() {
   copy(src, sx, sy, sw, sh, dx, dy, dw, dh);
 }
 	  </script>
-    <canvas id="sketch" style="border: 1px solid black;"></canvas>
+    <canvas id="sketch" style="border: 1px solid black;"></canvas></div>
+	<div class="item">B</div>
+	<div class="item">C</div>
+	<div class="item">D</div>
+	<div class="item">E</div>
+	<div class="item">F</div>
+	<div class="item">G</div>
+	<div class="item">H</div>
+	<div class="item">I</div>
+</div>
+
+
 
     <p>Hello, World!</p>
 
 </body>
 
 </html>
-
