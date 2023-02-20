@@ -16,24 +16,23 @@
 	
 <body> 
    <script type="text/processing">
-
-  PImage src;
+PImage src;
 
 void setup() {
-  size(1300, 900);
-  scale(0.5)
-  src = loadImage("northkoreaninteriors6-1.jpg");  
+  size(899, 725);
+  scale (0.5);
+  src = loadImage("northkoreaninteriors6-1.jpg");
 }
 
 void draw() {
   background(0);
-  
+   
   image(src,0,0);
 
   int sx = mouseX;
   int sy = mouseY;
-  int sw = 300;
-  int sh = 300;
+  int sw = 600;
+  int sh = 600;
 
   int dx = mouseX;
   int dy = mouseY;
