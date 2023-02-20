@@ -5,80 +5,86 @@
 
     <script type="text/javascript" src="processing.js"></script>
   <style>
+* {
+box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 32px;
+}
+column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+column img {
+  margin-top: 12px;
+}
+
+
+row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+	  
  p {
   color: red;
   font-family: courier;
   font-size: 160%;
   border: 2px solid powderblue; 
-}	
-#photos {
-  line-height: 0;
-  text-align: center;
-  padding-top: 7%;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 0px;
-  -moz-column-count: 4;
-  -moz-column-gap: 5px;
-  column-count: 4;
-  column-gap: 10px;
-  width: 50%;
 }
+	  
 
-#photos img {
-  width: 100% !important;
-  height: auto !important;
-  border-radius: 50px;
-  padding-top: 10px;
-  transition: transform .2s;
-}
-
-img:hover {
-  transform: scale(1.13);
-}
-
-@media (max-width: 1200px) {
-  #photos {
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4;
-  }
-}
-
-@media (max-width: 1000px) {
-  #photos {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-}
-
-@media (max-width: 800px) {
-  #photos {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
-}
-
-@media (max-width: 400px) {
-  #photos {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
-  }
-}
-	
 	</style>   
 </head>
-
+	
 <body>
+	<div class="header">
+  <h1>kitsch</h1></div>
+ <div class="row"> 
+  <div class="column">
+  <PImage src;
 
+void setup() {
+  size(1500, 900);
+  src = loadImage("northkoreaninteriors6-1.jpg");
+}
+
+void draw() {
+  background(0);
+  
+  image(src,0,0);
+
+  int sx = mouseX;
+  int sy = mouseY;
+  int sw = 300;
+  int sh = 300;
+
+  int dx = mouseX;
+  int dy = mouseY;
+  int dw = 500;
+  int dh = 500;
+
+  copy(src, sx, sy, sw, sh, dx, dy, dw, dh);
+}
+
+  </script>" style="width:100%">
+</div>
+</div>
+  <script type="text/processing">
+
+
+    <canvas id="sketch" style="border: 1px solid black;"></canvas>
 
     <p>Hello, World!</p>
-<section id="photos">
-  <img src="text/processing/300/300" />
-  <img src="https://via.placeholder.com/300/300" />
-  <img src="https://via.placeholder.com/300/300" />
+
 </section>
 </body>
 
