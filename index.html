@@ -11,7 +11,62 @@
   font-size: 160%;
   border: 2px solid powderblue; 
 }	
-	
+#photos {
+  line-height: 0;
+  text-align: center;
+  padding-top: 7%;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 4;
+  -moz-column-gap: 5px;
+  column-count: 4;
+  column-gap: 10px;
+  width: 50%;
+}
+
+#photos img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 50px;
+  padding-top: 10px;
+  transition: transform .2s;
+}
+
+img:hover {
+  transform: scale(1.13);
+}
+
+@media (max-width: 1200px) {
+  #photos {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (max-width: 1000px) {
+  #photos {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  #photos {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  #photos {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
 	
 	</style>   
 </head>
@@ -48,7 +103,11 @@ void draw() {
     <canvas id="sketch" style="border: 1px solid black;"></canvas>
 
     <p>Hello, World!</p>
-
+<section id="photos">
+  <img src="text/processing/300/300" />
+  <img src="https://via.placeholder.com/300/300" />
+  <img src="https://via.placeholder.com/300/300" />
+</section>
 </body>
 
 </html>
