@@ -6,23 +6,24 @@
 	 
   </head>
   <body>
-	  <script type="text/processing">  import processing.core.*;
-import processing.data.*;
-import processing.event.*;
-import processing.opengl.*;
+	  <script type="text/processing"> 
+	  import processing.core.*; 
+	  import processing.data.*; 
+	  import processing.event.*; 
+	  import processing.opengl.*; 
+	  
+	  import java.util.HashMap; 
+	  import java.util.ArrayList; 
+	  import java.io.File; 
+	  import java.io.BufferedReader; 
+	  import java.io.PrintWriter; 
+	  import java.io.InputStream; 
+	  import java.io.OutputStream; 
+	  import java.io.IOException; 
+	  
+	  public class copy_and_paste_ extends PApplet {
 
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.io.File;
-import java.io.BufferedReader;
-import java.io.PrintWriter;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
-
-public class copy_and_paste_ extends PApplet {
-
-PImage src;
+           PImage src;
 
 public void setup() {
   /* size commented out by preprocessor */;
@@ -60,7 +61,7 @@ public void draw() {
   }
 }
   </script>
-	  <canvas id ="sketch" style="border: 1px solid black;"> </canvas>
+	  <canvas id ="sketch" style="border: 1px solid black;"></canvas>
     <main>
     </main>
 
