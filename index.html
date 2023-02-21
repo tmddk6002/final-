@@ -1,39 +1,19 @@
+
 <html>
 
 <head>
-	
- <script type="text/javascript" src="processing.js"></script>	  
- 	<style>
-	p {
-  color: red;
-  font-family: courier;
-  font-size: 160%;
-  border: 2px solid powderblue; 
-	}
-	container {
-   align-content: stretch;
-	/* align-content: start; */
-	/* align-content: center; */
-	/* align-content: end; */
-	/* align-content: space-between; */
-	/* align-content: space-around; */
-	/* align-content: space-evenly; */
-	}
-</style> 
-  
-</head>
-	
-<body> 
 
-   
- <div class="container">
-	<div class="item">   
+    <script type="text/javascript" src="processing.js"></script>
+     
+</head>
+
+<body>
     <script type="text/processing">
 
 PImage src;
 
 void setup() {
-  size(899, 725);
+  size(1500, 900);
   src = loadImage("northkoreaninteriors6-1.jpg");
 }
 
@@ -54,158 +34,8 @@ void draw() {
 
   copy(src, sx, sy, sw, sh, dx, dy, dw, dh);
 }
-	  </script> <canvas id="sketch" style="border: 1px solid black;"></canvas>
-    </div>
-	<div class="item">    <script type="text/processing">
-
-PImage img; 
-
-void setup(){
- size(900,900); 
- img = loadImage("showimg_wkr02_full.jpg");
- background(0);
-}
-
-void draw(){
-  
-  
-  push();
-  translate(width/2,height/2);
-  
-  int sx = 0;
-  int sy = int(map(sin(radians(frameCount*0.9)),-1,1,10,img.height-10));
-  int sw = int(width);
-  int sh = 20;
-  
-  int dx = 0;
-  int dy = 0;
-  int dw = int(width*0.4);
-  int dh = 20;
-  
-  rotate(radians(frameCount));
-  translate(width*0.05,0);
-  copy(img,sx,sy,sw,sh,dx,dy,dw,dh);
-  
-  pop();
-}	  </script> <canvas id="sketch" style="border: 1px solid black;"></canvas>
-	
-     </div>
-	<div class="item">    <script type="text/processing">
-PImage src;
-
-void setup() {
-  size(900, 900);
-  src = loadImage("showimg_wkr02_full.jpg");
-  background(0);
-  img.resize(width/2, 0)
-}
-
-void draw() {
-  
-  int wave1 = int(map(sin(radians(frameCount*0.76)),-1,1,0,width));
-  int wave2 = int(map(sin(radians(frameCount)),-1,1,0,width));
-  
-  int sx = wave1;
-  int sy = 0;
-  int sw = 100;
-  int sh = 900;
-
-  int dx = wave2;
-  int dy = 0;
-  int dw = 100;
-  int dh = 900;
-
-  copy(src, sx, sy, sw, sh, dx, dy, dw, dh);
-
-}    </script> <canvas id="sketch" style="border: 1px solid black;"></canvas>
-</div>
-	<div class="item"> <script type="text/processing">
-PImage img; 
-
-void setup(){
- size(900,900); 
-
- img = loadImage("Screen Shot 2023-02-21 at 12.04.13 AM.png");
- background(0);
-}
-
-void draw(){
-  
-  
-  push();
-  translate(width/2,height/2);
-  
-  int sx = 0;
-  int sy = int(map(sin(radians(frameCount*0.9)),-1,1,10,img.height-10));
-  int sw = int(width);
-  int sh = 20;
-  
-  int dx = 0;
-  int dy = 0;
-  int dw = int(width*0.4);
-  int dh = 20;
-  
-  rotate(radians(frameCount));
-  translate(width*0.05,0);
-  copy(img,sx,sy,sw,sh,dx,dy,dw,dh);
-  
-  pop();
-}
-</script> <canvas id="sketch" style="border: 1px solid black;"></canvas></div>
-	<div class="item"> <script type="text/processing">
-
-PImage img;
-
-void setup(){
-  size(1200,900);
-  img = loadImage("mlk.jpg");
-}
-
-void draw(){
-  background(#f1f1f1);
-  image(img,0,0);
-  noStroke();
-  color c = img.get(mouseX,mouseY);
-  fill(c);
-  ellipse(mouseX,mouseY,250,250);
-} </script>
- <canvas id="sketch" style="border: 1px solid black;"></canvas></div>
-
-	<div class="item"><script type="text/processing">
-
-PImage img;
-PGraphics mask;
-
-void setup() {
-  size(900, 900);
-  img = loadImage("massgames08.jpg");
-  img.resize(width, height);
-  mask = createGraphics(img.width, img.height);
-}
-
-void draw() {
-  background(0);
-  mask.beginDraw();
-  mask.background(0);
-  mask.fill(#FFFFFF);
-  mask.noStroke();
-  mask.translate(width/2, height/2);
-  mask.rectMode(CENTER);
-  mask.rotate(radians(frameCount * 1));
-  mask.rect(0, 0, 800, 100);
-  mask.endDraw();
-  img.mask(mask);
-  image(img, 0, 0);
-}
-
-</script>
- <canvas id="sketch" style="border: 1px solid black;"></canvas> </div>
-
-	<div class="item">G</div>
-	<div class="item">H</div>
-	<div class="item">I</div>
-
-
+	  </script>
+    <canvas id="sketch" style="border: 1px solid black;"></canvas>
 
     <p>Hello, World!</p>
 
