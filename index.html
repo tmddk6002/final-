@@ -151,7 +151,26 @@ void draw(){
   pop();
 }
 </script> <canvas id="sketch" style="border: 1px solid black;"></canvas></div>
-	<div class="item"> </div>
+	<div class="item"><script type="text/processing">
+
+PImage img;
+
+void setup(){
+  size(1200,900);
+  img = loadImage("mlk.jpg");
+}
+
+void draw(){
+  background(#f1f1f1);
+  image(img,0,0);
+  noStroke();
+  color c = img.get(mouseX,mouseY);
+  fill(c);
+  ellipse(mouseX,mouseY,250,250);
+} </script>
+ <canvas id="sketch" style="border: 1px solid black;"></canvas></div>
+
+</div>
 	<div class="item">F</div>
 	<div class="item">G</div>
 	<div class="item">H</div>
