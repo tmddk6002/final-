@@ -170,7 +170,35 @@ void draw(){
 } </script>
  <canvas id="sketch" style="border: 1px solid black;"></canvas></div>
 
-	<div class="item">,</div>
+	<div class="item"><script type="text/processing">
+
+PImage img;
+PGraphics mask;
+
+void setup() {
+  size(900, 900);
+  img = loadImage("massgames08.jpg");
+  img.resize(width, height);
+  mask = createGraphics(img.width, img.height);
+}
+
+void draw() {
+  background(0);
+  mask.beginDraw();
+  mask.background(0);
+  mask.fill(#FFFFFF);
+  mask.noStroke();
+  mask.translate(width/2, height/2);
+  mask.rectMode(CENTER);
+  mask.rotate(radians(frameCount * 1));
+  mask.rect(0, 0, 800, 100);
+  mask.endDraw();
+  img.mask(mask);
+  image(img, 0, 0);
+}
+
+</script>
+ <canvas id="sketch" style="border: 1px solid black;"></canvas> </div>
 
 	<div class="item">G</div>
 	<div class="item">H</div>
