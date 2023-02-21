@@ -151,59 +151,7 @@ void draw(){
   pop();
 }
 </script> <canvas id="sketch" style="border: 1px solid black;"></canvas></div>
-	<div class="item"> <script type="text/processing">
-PImage img;
-
-int tilesX = 900;
-int tilesY = 900;
-
-void setup() {
-  size(900, 900);
-  img = loadImage("fde4af690973ba3ef2a2fc1548d4d01f.jpg");
-  img.resize(tilesX, tilesY);
-}
-
-void draw() {
-  background(#f1f1f1);
-
-  float tileW = width / tilesX;
-  float tileH = height / tilesY;
-  fill(0);
-  noStroke();
-
-  pushMatrix();
-
-  translate(tileW/2, tileH/2);
-  for (int x = 0; x < tilesX; x++) {
-    for (int y = 0; y < tilesY; y++) {
-      
-      float waveX = map(tan(radians(frameCount + x*0.1 + y*0.33)),-1,1,-20,20);
-      float waveY = map(tan(radians(frameCount + x*0.2 + y*0.1)),-1,1,-20,20);
-      
-      color c = img.get(x,y);
-      float b = brightness(c);
-      float s = map(b, 0, 255, tileW, 0);
-      
-      color fg = #000000;
-      color bg = #f1f1f1;
-      float wave3 = map(tan(radians(frameCount + x + y)),-1,1,0,1);
-      
-      color thecolor = lerpColor(fg,bg,wave3);
-      
-      fill(thecolor);
-      
-      pushMatrix();
-      translate(x*tileW + waveX, y*tileH +waveY);
-      rect(0, 0, s*2, s*2);
-      popMatrix();
-    }
-  }
-
-  popMatrix();
-  
-}
- </script>
- <canvas id="sketch" style="border: 1px solid black;"></canvas></div></div>
+	<div class="item"> </div>
 	<div class="item">F</div>
 	<div class="item">G</div>
 	<div class="item">H</div>
